@@ -35,11 +35,15 @@ do
             }
             if (userChoice == Roshambo.Scissors)
             {
-                Console.WriteLine("Rock beats Scissors! You lose!");
+                Console.WriteLine($"{user.Name}: {userChoice} ");
+                Console.WriteLine($"{enemyHuman.Name}: {opponentChoice} ");
+                Console.WriteLine($"{enemyHuman.Name} wins!");
             }
             if (userChoice == Roshambo.Paper)
             {
-                Console.WriteLine("Paper beats Rock! You win!");
+                Console.WriteLine($"{user.Name}: {userChoice} ");
+                Console.WriteLine($"{enemyHuman.Name}: {opponentChoice} ");
+                Console.WriteLine($"{user.Name} wins!");
             }
             break;
 
