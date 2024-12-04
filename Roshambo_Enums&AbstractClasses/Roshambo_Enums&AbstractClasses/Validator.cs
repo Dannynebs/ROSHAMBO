@@ -20,20 +20,13 @@ namespace Roshambo_Enums_AbstractClasses
             Console.WriteLine("YEAH LETS PLAY");
             return true;
         }
-        
+
         public static bool NumberIsInRange(int userNumber)
         {
-            
-            if (userNumber >= 1)
+
+            if (userNumber >= 1 && userNumber <= 3)
             {
-                if (userNumber <= 3)
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
+                return true;
             }
             else
             {
@@ -53,6 +46,7 @@ namespace Roshambo_Enums_AbstractClasses
                 {
                     // Tries to parse the entered value
                     returnValue = int.Parse(Console.ReadLine());
+
                 }
                 catch
                 {

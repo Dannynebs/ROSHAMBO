@@ -7,10 +7,11 @@ HumanPlayer user = new HumanPlayer();
 HumanPlayer enemyHuman = new HumanPlayer();
 RockPlayer rockPlayer = new RockPlayer();
 RandomPlayer randomPlayer = new RandomPlayer();
+Validator validator = new Validator();
 Console.WriteLine("What is your name?");
 user.Name = Console.ReadLine();
-
-do
+bool willPlayAgain = true;
+while (willPlayAgain)
 {
     string message = "Who will you face in battle? Enter 1 for a Rock Player, 2 for a random player, or 3 for a human player";
     int userOpponent = Validator.GetIntegerFromUser(message);
@@ -93,8 +94,12 @@ do
             }
             break;
     }
-    Validator.GetPlayAgainAnswer();
-} while (Validator.GetPlayAgainAnswer() == true);
+    if(Validator.GetPlayAgainAnswer() == false)
+    {
+        willPlayAgain = false;
+    }
+}
+
 
 // You still need to do validations. Validator class is probably easier.
 // The challenges are doable.
